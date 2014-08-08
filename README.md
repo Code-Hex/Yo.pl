@@ -2,23 +2,13 @@ Yo.pl
 =====
 
 Yo in Perl  
-  
-  ___   ___ ________       
- |\\ \\ /  /|\\  __  \\      
- \\ \\  \\/  / | \\  \\|\\  \\     
-  \\ \\  / / \\ \\  \\\\  \\    
-   \\/  / /    \\ \\    \\\\  \\   
- __/   / /        \\ \\_______\\  
-|\\___/ /         \\|_______|  
-\\|___|/                     
-                            
                             
 Version: Yo.pl v1.0  
 Create by CodeHex(K) http://twitter.com/CodeHex  
 My Yo id: CODEHEX   
   
 #Usage  
-##% Yo.pl [OPTIONS] [USERNAME]  
+###% Yo.pl [OPTIONS] [USERNAME]  
   
   
 --- Input messages example ---  
@@ -26,9 +16,9 @@ My Yo id: CODEHEX
   % Yo.pl count			<- yo count  
   % Yo.pl yo CodeHex		<- yo to single user  
 --- Options ---  
-    -h         : help  
-    -v         : version  
+    -h          : help  
+    -v          : version  
     yo         : yo to single user  
-    all        : yo to all users  
+    all         : yo to all users  
     count      : yo count  
   
