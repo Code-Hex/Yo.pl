@@ -17,8 +17,8 @@ Version: Yo.pl v1.0
 Create by CodeHex(K) http://twitter.com/CodeHex  
 My Yo id: CODEHEX   
   
-##Usage  
-#% Yo.pl [OPTIONS] [USERNAME]  
+#Usage  
+###% Yo.pl [OPTIONS] [USERNAME]  
   
   
 --- Input messages example ---  
