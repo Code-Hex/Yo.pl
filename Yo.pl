@@ -10,24 +10,24 @@ die &usage if (@ARGV && $ARGV[0] =~ /^-h/); # options help
 die &version if (@ARGV && $ARGV[0] =~ /^-v/); # version
 
 my $ua = LWP::UserAgent->new;
-my $http = HTTP::Response->new;
 
-my $api_key = ""; # Yo api key
+my $api_key = ""; #Your Yo api key
 
 my $url = 'http://api.justyo.co';
 my %list = ("all" => "/yoall/",
-			"yo" => "/yo/",
-			"count" => "/subscribers_count/");
+			      "yo" => "/yo/",
+			      "count" => "/subscribers_count/");
 my ($api,$res);
 			if(@ARGV&&$ARGV[1]){
-			my $send_user = @ARGV&&$ARGV[1]? $ARGV[1] : " "; # input default user
+			my $user = @ARGV&&$ARGV[1]? $ARGV[1] : ""; #Input default user
+      my $send_user = uc $user; #covert
 
 			$api = $url.$list{'yo'};
 			$res = $ua->request(POST $api,
 			Content_Type => 'application/x-www-form-urlencoded', #Definitely Necessary
 			Content      =>[ api_token => $api_key,
          					 username  => $send_user ]);
-         	} elsif(@ARGV&&$ARGV[0] eq "all"){
+      } elsif(@ARGV&&$ARGV[0] eq "all"){
          	$api = $url.$list{'all'};
          	$res = $ua->request(POST $api,
          	Content_Type => 'application/x-www-form-urlencoded', #Definitely Necessary
@@ -50,7 +50,7 @@ Usage: % Yo.pl [OPTIONS] [USERNAME]
 --- Input messages example ---
   % Yo.pl all   		<- yo to all users
   % Yo.pl count			<- yo count
-  % Yo.pl yo CodeHex		<- yo to single user
+  % Yo.pl yo CODEHEX		<- yo to single user
 --- Options ---
     -h         : help
     -v         : version
@@ -66,14 +66,14 @@ sub version {
   ___    ___ ________     
  |\\  \\  /  /|\\   __  \\    
  \\ \\  \\/  / | \\  \\|\\  \\   
-  \\ \\    / / \\ \\   \\\\  \\  
-   \\/  /  /   \\ \\   \\\\  \\ 
+  \\ \\    / / \\ \\  \\|\\  \\  
+   \\/  /  /   \\ \\  \\|\\  \\ 
  __/  / /      \\ \\_______\\
 |\\___/ /        \\|_______|
 \\|___|/                   
                           
                           
-Version: Yo.pl v1.0
+Version: Yo.pl v1.1
 Create by CodeHex(K) http://twitter.com/CodeHex
 My Yo id: CODEHEX 
 __EOF__
