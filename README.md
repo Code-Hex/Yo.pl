@@ -22,9 +22,9 @@ My Yo id: CODEHEX
   
   
 --- Input messages example ---  
-  % Yo.pl all   		<- yo to all users  
-  % Yo.pl count			<- yo count  
-  % Yo.pl yo CodeHex		<- yo to single user  
+  % Yo.pl all    <- yo to all users  
+  % Yo.pl count    <- yo count  
+  % Yo.pl yo CodeHex    <- yo to single user  
 --- Options ---  
     -h         : help  
     -v         : version  
